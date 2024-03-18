@@ -5552,52 +5552,75 @@ var app = (function () {
 
     function create_fragment$b(ctx) {
     	let article;
-    	let section;
-    	let crossword;
+    	let section0;
+    	let crossword0;
+    	let t;
+    	let section1;
+    	let crossword1;
     	let current;
-    	crossword = new Crossword({ props: { data: dataTest } });
+    	crossword0 = new Crossword({ props: { data: dataTest } });
+
+    	crossword1 = new Crossword({
+    			props: { data: dataTest, showKeyboard: true }
+    		});
 
     	return {
     		c() {
     			article = element("article");
-    			section = element("section");
-    			create_component(crossword.$$.fragment);
+    			section0 = element("section");
+    			create_component(crossword0.$$.fragment);
+    			t = space();
+    			section1 = element("section");
+    			create_component(crossword1.$$.fragment);
     			this.h();
     		},
     		l(nodes) {
     			article = claim_element(nodes, "ARTICLE", { class: true });
     			var article_nodes = children(article);
-    			section = claim_element(article_nodes, "SECTION", { id: true, class: true });
-    			var section_nodes = children(section);
-    			claim_component(crossword.$$.fragment, section_nodes);
-    			section_nodes.forEach(detach);
+    			section0 = claim_element(article_nodes, "SECTION", { id: true, class: true });
+    			var section0_nodes = children(section0);
+    			claim_component(crossword0.$$.fragment, section0_nodes);
+    			section0_nodes.forEach(detach);
+    			t = claim_space(article_nodes);
+    			section1 = claim_element(article_nodes, "SECTION", { id: true, class: true });
+    			var section1_nodes = children(section1);
+    			claim_component(crossword1.$$.fragment, section1_nodes);
+    			section1_nodes.forEach(detach);
     			article_nodes.forEach(detach);
     			this.h();
     		},
     		h() {
-    			attr(section, "id", "default");
-    			attr(section, "class", "svelte-1ous2mk");
-    			attr(article, "class", "svelte-1ous2mk");
+    			attr(section0, "id", "default");
+    			attr(section0, "class", "show-large svelte-h8o6au");
+    			attr(section1, "id", "default");
+    			attr(section1, "class", "show-small svelte-h8o6au");
+    			attr(article, "class", "svelte-h8o6au");
     		},
     		m(target, anchor) {
     			insert(target, article, anchor);
-    			append(article, section);
-    			mount_component(crossword, section, null);
+    			append(article, section0);
+    			mount_component(crossword0, section0, null);
+    			append(article, t);
+    			append(article, section1);
+    			mount_component(crossword1, section1, null);
     			current = true;
     		},
     		p: noop,
     		i(local) {
     			if (current) return;
-    			transition_in(crossword.$$.fragment, local);
+    			transition_in(crossword0.$$.fragment, local);
+    			transition_in(crossword1.$$.fragment, local);
     			current = true;
     		},
     		o(local) {
-    			transition_out(crossword.$$.fragment, local);
+    			transition_out(crossword0.$$.fragment, local);
+    			transition_out(crossword1.$$.fragment, local);
     			current = false;
     		},
     		d(detaching) {
     			if (detaching) detach(article);
-    			destroy_component(crossword);
+    			destroy_component(crossword0);
+    			destroy_component(crossword1);
     		}
     	};
     }

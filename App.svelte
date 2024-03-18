@@ -12,15 +12,29 @@
 
 
 <article>
-  <section id="default">
+  <section id="default" class ="show-large">
 
     <Crossword data="{dataTest}" />
+  </section>
+
+  <section id="default" class = "show-small">
+
+    <Crossword data="{dataTest}" showKeyboard="{true}"/>
   </section>
 
  
 </article>
 
 <style>
+
+/* `contents` prevents wrapper from affecting layout */
+  .show-small { display: none; }
+  .show-large { display: inline; }
+
+  @media (max-width: 768px) {
+    .show-small { display: inline; }
+    .show-large { display: none; }
+  }
   article {
     max-width: 960px;
     margin: 0 auto;
