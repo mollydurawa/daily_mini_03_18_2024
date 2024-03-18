@@ -4,7 +4,7 @@
   import dataNYTDaily from "./data/nyt-daily.json";
   import dataOreo from "./data/oreo.json";
   import dataUSA from "./data/usa.json";
-  import dataTest from "./data/test_crossword.json";
+  import dataTest from "./data/christopher_thats_hot.txt.json";
 
   let revealedUSA;
   let theme;
@@ -34,7 +34,7 @@
   }
   section {
     max-width: 960px;
-    margin: 5em 0;
+    
   }
 
   .info {

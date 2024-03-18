@@ -1,0 +1,72 @@
+[
+  {
+    "y": 0,
+    "x": 0,
+    "direction": "across",
+    "answer": "BASES",
+    "clue": "Forts"
+  },
+  {
+    "y": 1,
+    "x": 0,
+    "direction": "across",
+    "answer": "APPLE",
+    "clue": "A doctor’s greatest enemy"
+  },
+  {
+    "y": 2,
+    "x": 0,
+    "direction": "across",
+    "answer": "CHILE",
+    "clue": "Country characterized by 3-Down?"
+  },
+  {
+    "y": 3,
+    "x": 0,
+    "direction": "across",
+    "answer": "NICER",
+    "clue": "More kind"
+  },
+  {
+    "y": 4,
+    "x": 0,
+    "direction": "across",
+    "answer": "EDENS",
+    "clue": "Perfect utopias"
+  },
+  {
+    "y": 0,
+    "x": 0,
+    "direction": "down",
+    "answer": "BACNE",
+    "clue": "Shoulder breakout, slangily"
+  },
+  {
+    "y": 0,
+    "x": 1,
+    "direction": "down",
+    "answer": "APHID",
+    "clue": "Ladybug’s meal of choice"
+  },
+  {
+    "y": 0,
+    "x": 2,
+    "direction": "down",
+    "answer": "SPICE",
+    "clue": "”Flavoring” of 7-Across"
+  },
+  {
+    "y": 0,
+    "x": 3,
+    "direction": "down",
+    "answer": "ELLEN",
+    "clue": "Former talk show host DeGeneres"
+  },
+  {
+    "y": 0,
+    "x": 4,
+    "direction": "down",
+    "answer": "SEERS",
+    "clue": "Fortune tellers"
+  }
+]
